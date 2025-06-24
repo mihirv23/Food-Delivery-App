@@ -85,8 +85,11 @@ npm start
 ### Custom Hooks
 
 useAuth() – Manages login, signup, logout and stores token in context/localStorage
+
 useFetch() – A reusable hook using Axios to call API, handles loading and error state
+
 useCart() – Handles cart logic: add/remove items, calculate totals, sync with backend
+
 useOrders() – Fetches order history and submits new orders
 
 ## Screenshots
