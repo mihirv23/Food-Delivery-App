@@ -4,27 +4,6 @@ A full-stack food delivery solution built with React (frontend) and Node.js/Expr
 
 ---
 
-## Table of Contents
-
-- [Features](#features)  
-- [Tech Stack](#tech-stack)  
-- [Architecture Overview](#architecture-overview)  
-- [Getting Started](#getting-started)  
-  - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
-  - [Running the App](#running-the-app)  
-- [Backend Overview](#backend-overview)  
-  - [Authentication & Security](#authentication--security)  
-  - [API Endpoints](#api-endpoints)  
-- [Frontend Overview](#frontend-overview)  
-  - [Custom Hooks](#custom-hooks)  
-- [Folder Structure](#folder-structure)  
-- [Deployment](#deployment)  
-- [Contributing](#contributing)  
-- [License](#license)
-
----
-
 ## Features
 
 - ✅ User signup/login with secure hashed passwords (`bcrypt`)  
@@ -43,7 +22,6 @@ A full-stack food delivery solution built with React (frontend) and Node.js/Expr
 | Frontend   | React, React Router, Axios, Context API |
 | Backend    | Node.js, Express, JWT, bcrypt, MongoDB/Mongoose |
 | Dev Tools  | ESLint, Prettier, Nodemon |
-| Deployment | (e.g., Heroku, Vercel, MongoDB Atlas) |
 
 ---
 
@@ -82,9 +60,9 @@ cp .env.example .env
 # Frontend setup
 cd ../frontend
 npm install
-
+```
 ## Running the App
-
+```bash
 
 # In one terminal (Backend)
 cd backend
@@ -94,38 +72,25 @@ npm run dev
 cd frontend
 npm start
 ```
-# Backend Overview
+## Backend Overview
 
 ### Authentication & Security
 📌 Passwords are hashed with bcrypt before saving to MongoDB
-
 📌 Login/signup flows issue JWT tokens
-
 📌 Protected Express routes use middleware to verify JWTs and attach user data
 
-# API Endpoints
 
-POST /api/auth/register – register a new user
+## Frontend Overview
 
-POST /api/auth/login – login and receive JWT
+### Custom Hooks
 
-GET /api/menu – get available food items
-
-POST /api/cart – add/update cart
-
-GET /api/orders – view your past orders
-
-POST /api/orders – place a new order
-
-GET /api/admin/orders – (admin only) fetch all orders
-
-# Frontend Overview
-
-## Custom Hooks
 useAuth() – Manages login, signup, logout and stores token in context/localStorage
-
 useFetch() – A reusable hook using Axios to call API, handles loading and error state
-
 useCart() – Handles cart logic: add/remove items, calculate totals, sync with backend
-
 useOrders() – Fetches order history and submits new orders
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/fb1b5b12-49aa-445f-a9b1-d20d13b0aae2)
+
+![image](https://github.com/user-attachments/assets/f4d2bcbe-8773-4f92-a56d-9a41940d3e17)
+
