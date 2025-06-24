@@ -90,7 +90,8 @@ useCart() – Handles cart logic: add/remove items, calculate totals, sync with 
 useOrders() – Fetches order history and submits new orders
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/fb1b5b12-49aa-445f-a9b1-d20d13b0aae2)
+![image](https://github.com/user-attachments/assets/fb1b5b12-49aa-445f-a9b1-d20d13b0aae2) ![image](https://github.com/user-attachments/assets/f4d2bcbe-8773-4f92-a56d-9a41940d3e17)
 
-![image](https://github.com/user-attachments/assets/f4d2bcbe-8773-4f92-a56d-9a41940d3e17)
+![image](https://github.com/user-attachments/assets/363ee6ff-2d54-42c9-adeb-2f09c5f01f9d)
+
 
