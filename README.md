@@ -94,16 +94,16 @@ npm run dev
 cd frontend
 npm start
 ```
-### Backend Overview
+# Backend Overview
 
-## Authentication & Security
+### Authentication & Security
 📌 Passwords are hashed with bcrypt before saving to MongoDB
 
 📌 Login/signup flows issue JWT tokens
 
 📌 Protected Express routes use middleware to verify JWTs and attach user data
 
-### API Endpoints
+# API Endpoints
 
 POST /api/auth/register – register a new user
 
@@ -119,7 +119,7 @@ POST /api/orders – place a new order
 
 GET /api/admin/orders – (admin only) fetch all orders
 
-### Frontend Overview
+# Frontend Overview
 
 ## Custom Hooks
 useAuth() – Manages login, signup, logout and stores token in context/localStorage
