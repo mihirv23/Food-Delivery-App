@@ -33,6 +33,9 @@ let navigate = useNavigate()
       }
   const onChange=(event)=>{
       setcredentials({...credentials,[event.target.name]:event.target.value})
+      //here evnt is an object from the input field 
+      //used to update the credential object
+      
   }
   return (
     <div>

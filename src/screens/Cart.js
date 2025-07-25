@@ -11,6 +11,7 @@ export default function Cart() {
       </div>
     )
   }
+  // localStorage.setItem("CurrCartItem", JSON.stringify(data));
   // const handleRemove = (index)=>{
   //   console.log(index)
   //   dispatch({type:"REMOVE",index:index})

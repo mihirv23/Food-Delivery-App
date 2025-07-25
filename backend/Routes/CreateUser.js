@@ -76,11 +76,10 @@ router.post("/loginuser",[
         const data = {
             user:{
                 id:userData.id
+                //this id is the unique key associated with the db document 
             }
         }
         const authToken = jwt.sign(data,jwtSecret)
-
-
 
         return res.json({success : true, authTokenValue : authToken})
     }

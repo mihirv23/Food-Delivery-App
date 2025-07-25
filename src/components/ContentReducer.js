@@ -1,8 +1,10 @@
-import React, { createContext, useContext, useReducer } from 'react'
+import React, { createContext, useContext, useReducer,useEffect } from 'react'
 //we are now creating a global state so that we cna chage it fro anywhere in my project
 const CartStateContext = createContext()
 const CartDispatchContext = createContext()
 const reducer = (state,action)=>{
+    //action is an object containing all details of the card
+    //with it a type is also associated
     switch(action.type){
         case 'ADD' :
             return [...state,{id:action.id,name:action.name,qty: action.qty, size: action.size, price:action.price,img : action.img}]
@@ -28,8 +30,16 @@ const reducer = (state,action)=>{
     }
 }
 
+const initializer = () => {
+  const storedCart = localStorage.getItem("CurrCartItem");
+  return storedCart ? JSON.parse(storedCart) : [];
+};
+
 export const CartProvider = ({children})=>{
-    const[state,dispatch] = useReducer(reducer,[])
+    const[state,dispatch] = useReducer(reducer,[],initializer)
+    useEffect(() => {
+  localStorage.setItem("CurrCartItem", JSON.stringify(state));
+}, [state]);
     return (
         <CartDispatchContext.Provider value={dispatch}>
             <CartStateContext.Provider value={state}>

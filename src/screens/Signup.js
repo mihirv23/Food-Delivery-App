@@ -1,14 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup() {
+  let navigate = useNavigate()
     const[credentials,setcredentials] = useState({name:"",email:"",password:"",geolocation:""})
     const handleSubmit =async (e)=>{
         e.preventDefault();
         const response = await fetch("http://localhost:5000/api/createuser",{
             method:'POST',
             headers:{
-                'COntent-Type':'application/json'
+                'Content-Type':'application/json'
             },
             body:JSON.stringify({name:credentials.name,email:credentials.email,password:credentials.password,location:credentials.geolocation})
         })
@@ -19,6 +20,9 @@ export default function Signup() {
             //this part is used jab apan success return karte hai in createUser when credentials entered our correct
             //ya failure aata hai
             alert("Enter Valid Credentials")
+        }
+        else {
+          navigate("/login");
         }
     }
 const onChange=(event)=>{
@@ -81,3 +85,5 @@ const onChange=(event)=>{
     </>
   );
 }
+
+//cmon man 

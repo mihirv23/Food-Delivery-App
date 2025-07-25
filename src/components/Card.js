@@ -50,6 +50,7 @@ export default function Card(props) {
   
     
     // console.log(data);
+    
   };
 
   let finalPrice = 0;

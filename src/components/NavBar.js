@@ -4,13 +4,21 @@ import Badge from "react-bootstrap/Badge";
 import Modal from "../Modal";
 import Cart from "../screens/Cart";
 import { useCart } from "./ContentReducer";
+import {useDispatchCart } from '../components/ContentReducer';
+
 
 export default function NavBar() {
+  let dispatch = useDispatchCart();
     let data = useCart();
     const [cartView,setCartView] = useState(false)
   const navigate = useNavigate();
   const handleLogout = () => {
+    
+    dispatch({ type: "DROP" });
     localStorage.removeItem("authtoken");
+    localStorage.removeItem("CurrCartItem");
+
+    // localStorage.removeItem("userEmail");
     navigate("/login");
   };
 
